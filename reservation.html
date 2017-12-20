@@ -2,101 +2,91 @@
 <html lang="fr">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
-<title>Chez R. - venez profiter du bon R.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Chez R. - venez profiter du bon R.</title>
 
-<!-- CSS  -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
-<link href="css/materialize.css" type="text/css" rel="stylesheet"
-	media="screen" />
-<link href="css/style.css" type="text/css" rel="stylesheet"
-	media="screen" />
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+
 </head>
 
 <body>
 
-
-	<!--  bannière -->
-	<div id="index-banner" class="parallax-container">
-		<div class="section no-pad-bot">
-			<div class="banniere">
-				<div class="">
-					<h1 class="header center teal-text text-grey darken-4">Chez R.</h1>
-					<div class="row center">
-						<i class="center teal-text text-grey medium material-icons">grade
+    <!--  bannière -->
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="banniere">
+                <div class="">
+                    <h1 class="header center teal-text text-grey darken-4">Chez R.</h1>
+                    <div class="row center">
+                        <i class="center teal-text text-grey medium material-icons">grade
 							grade grade grade</i>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="parallax">
-			<img src="images/background1.jpg" alt="Unsplashed background img 1">
-		</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="images/background1.jpg" alt="Unsplashed background img 1">
+        </div>
+    </div>
 
-	<nav class="white">
-	<div class="nav-wrapper container">
+    <nav class="white">
+        <div class="nav-wrapper container">
 
-		<!-- <a id="logo-container" href="#" class="brand-logo">Logo</a> -->
-		
-		<!--  menu  -->
-		<ul class="center hide-on-med-and-down">
-			<li><a href="index.html">LA MAISON</a></li>
-			<li><a href="region.html">LA REGION</a></li>
-			<li class="active"><a href="reservation.html">RESERVATION</a></li>
-		</ul>
+            <!--  menu  -->
+            <ul class="center hide-on-med-and-down">
+                <li><a href="index.html">LA MAISON</a></li>
+                <li><a href="region.html">LA REGION</a></li>
+                <li class="active"><a href="reservation.html">RESERVATION</a></li>
+            </ul>
 
-		<ul id="nav-mobile" class="side-nav">
-			<li><a href="index.html">LA MAISON</a></li>
-			<li><a href="region.html">LA REGION</a></li>
-			<li class="active"><a href="reservation.html">RESERVATION</a></li>
-		</ul>
-		<a href="#" data-activates="nav-mobile" class="button-collapse"><i
-			class="material-icons">menu</i></a>
-	</div>
-	</nav>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="index.html">LA MAISON</a></li>
+                <li><a href="region.html">LA REGION</a></li>
+                <li class="active"><a href="reservation.html">RESERVATION</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i
+				class="material-icons">menu</i></a>
+        </div>
+    </nav>
 
-	<!-- ici commence le new code -->
-	<div class="container">
+    <!-- ici commence le new code -->
+    <div class="container">
+        <form action="IndexServlet" method="post">
 
-			<!-- chemin du servlet (@webservlet), on met ce qu on veut -->
-			<div class="row">
-			<div class="center"><h4>Réservez dès maintenant</h4></div>
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">face</i>
-					<input id="icon_nom" type="text" class="validate" pattern="^[a-zA-Z]+$" title="Attention, seulement des lettres!" name="nom" required>
-						<label for="icon_prefix">Nom</label>
-				</div>
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">face</i>
-					<input id="icon_prenom" type="text" class="validate" name="prenom" required>
-					<label for="icon_prefix">Prénom</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">email</i>
-					<input id="icon_mail" type="tel" class="validate" name="mail" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="E-mail non valide">
-					<label for="icon_telephone">Courriel</label>
-				</div>
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">phone</i>
-					<input id="icon_telephone" type="tel" class="validate" name="tel" pattern="^[0-9]{10}$">
-					<label for="icon_telephone">Telephone</label>
-				</div>
-			</div>
+            <div class="row">
+                <div class="center">
+                    <h4>Réservez dès maintenant</h4>
+                </div>
 
+                <!-- champs à remplir -->
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">face</i> <input id="icon_nom" type="text" class="validate" pattern="^[a-zA-Z]+$" title="Attention, seulement des lettres!" name="nom" required>
+                    <label for="icon_prefix">Nom</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">face</i> <input id="icon_prenom" type="text" class="validate" name="prenom" required> <label for="icon_prefix">Prénom</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">email</i> <input id="icon_mail" type="tel" class="validate" name="mail" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="E-mail non valide"> <label for="icon_telephone">Courriel</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">phone</i> <input id="icon_telephone" type="tel" class="validate" name="tel" pattern="^[0-9]{10}$"> <label for="icon_telephone">Telephone</label>
+                </div>
+            </div>
 
-	<!-- menus déroulants -->
-			<div class="row">
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">group_add</i>
-					<select  name="nbPersonne">
-						<option value="" disabled selected>Nombre de personne(s) :</option>
+            <!-- menus déroulants -->
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">group_add</i> <select name="nbPersonne">
+						<option value="" disabled selected>Nombre de personne(s)
+							:</option>
 						<option value="1">1 clampin</option>
 						<option value="2">couple</option>
 						<option value="3">trouple (!!)</option>
@@ -104,12 +94,10 @@
 						<option value="5">5 personnes</option>
 						<option value="6">Pas trop de bruit svp!</option>
 					</select>
-				</div>
+                </div>
 
-
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">location_on</i>
-					<select name="region">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">location_on</i> <select name="region">
 						<option value="" disabled selected>Région d'origine :</option>
 						<option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
 						<option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
@@ -123,135 +111,112 @@
 						<option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
 						<option value="Occitanie">Occitanie</option>
 						<option value="Pays de la Loire">Pays de la Loire</option>
-						<option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
+						<option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte
+							d'Azur</option>
 						<option value="Outre-Mer">Outre-Mer</option>
 						<option value="Etranger">Etranger</option>
 					</select>
-				</div>
-			</div>
+                </div>
+            </div>
 
-			<!-- durée séjour  -->
-			<div class="row">
-			
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">date_range</i>
-					<input type="text" class="datepicker" name="dateArrivee">
-					<label for="icon_telephone">Date d'arrivée</label>
-				</div>
-				
-				<div class="input-field col s12 m6">
-					<i class="material-icons prefix">hotel</i>
-					<input id="icon_prefix" type="text" class="validate" name="nbNuit">
-					<label for="icon_prefix">Nombre de nuits</label>
-				</div>
-			</div>
+            <!-- durée séjour  -->
+            <div class="row">
 
-			<div class="col s12">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">date_range</i> <input type="text" class="datepicker" name="dateArrivee"> <label for="icon_telephone">Date d'arrivée</label>
+                </div>
 
-				<!-- options -->
-				<div class="col s12 m6">
-					<h6>Supplément de 10€ par jour et par option</h6>
-					<br>
-					<input type="checkbox" name="animal" id="test1" />
-					<label class="col s12 m4" for="test1">Animal&nbsp;</label>
-					
-					<input type="checkbox" name="parking" id="test2" />
-					<label class="col s12 m4 " for="test2">Parking&nbsp;</label>
-					
-					<input type="checkbox" name="dej" id="test3" />
-					<label class="col s12 m4" for="test3">Petit Déjeuner&nbsp;</label>
-					
-				</div>
-				<br>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">hotel</i> <input id="icon_prefix" type="text" class="validate" name="nbNuit"> <label for="icon_prefix">Nombre de nuits</label>
+                </div>
+            </div>
 
-				<!-- type sejour -->
-				<div class="col s12 m6">
-					<h6>Type de Sejour</h6>
-					<br>
-					<label class="col s12 m4 "></label>
-					<input name="group1" type="radio" id="value1" value="loisir"/>
-					<label class="col s12 m4 " for="value1">Loisir</label>
-					<input name="group1" type="radio" id="value2" value="professionnel"/>
-					<label class="col s12 m4 " for="value2">Professionnel</label>
-				</div>
+            <div class="col s12">
 
-			</div>
-			<div class="row">
+                <!-- options checkbox -->
+                <div class="col s12 m6">
+                    <h6>Supplément de 10€ par jour et par option</h6>
+                    <br> <input type="checkbox" name="animal" id="test1" /> <label class="col s12 m4" for="test1">Animal&nbsp;</label> <input type="checkbox" name="parking" id="test2" /> <label class="col s12 m4 " for="test2">Parking&nbsp;</label> <input type="checkbox" name="dej" id="test3" /> <label class="col s12 m4" for="test3">Petit Déjeuner&nbsp;</label>
+                </div>
+                <br>
 
+                <!-- type sejour boolean -->
+                <div class="col s12 m6">
+                    <h6>Type de Sejour</h6>
+                    <br> <label class="col s12 m4 "></label> <input name="group1" type="radio" id="value1" value="loisir" /> <label class="col s12 m4 " for="value1">Loisir</label> <input name="group1" type="radio" id="value2" value="professionnel" /> <label class="col s12 m4 " for="value2">Professionnel</label>
+                </div>
+            </div>
+            <div class="row">
 
-				<!-- boutons d'envoi -->
-				<div class="input-field col s12 m6">
-					<button class="btn waves-effect waves-light" type="submit" value="envoyer">Récapitulatif
-					<i class="material-icons right">send</i>
+                <!-- boutons d'envoi -->
+                <div class="input-field col s12 m6">
+                    <button class="btn waves-effect waves-light" type="submit" value="envoyer">
+						Récapitulatif <i class="material-icons right">send</i>
 					</button>
-				</div>
-			</div>
-	</div>
+                </div>
+            </div>
+        </form>
+    </div>
 
+    <!-- footer -->
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row center">
+                <div class="col l4 s12">
+                    <h5 class="white-text">Partenaires</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Resto "A la gamelle"</a></li>
+                        <li><a class="white-text" href="#!">Accro'banches</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text">Contact</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Chez R.</a></li>
+                        <li><a class="white-text" href="#!">55, rue de Vincennes</a></li>
+                        <li><a class="white-text" href="#!">33333
+								Thune-sur-Gironde</a></li>
+                        <li><a class="white-text" href="#!">05 55 55 55 55</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text">Suivez-nous</h5>
+                </div>
+                <div>
+                    <a class="mt-facebook mt-share-inline-bar-sm" href="https://www.facebook.com/sharer/sharer.php?u="> <img
+						src="http://mojotech-static.s3.amazonaws.com/facebook@2x.png"
+						alt="Suivez-nous!">
+					</a> <a class="mt-twitter mt-share-inline-bar-sm" href="http://twitter.com/intent/tweet?text=&amp;url="> <img
+						src="http://mojotech-static.s3.amazonaws.com/twitter@2x.png"
+						alt="Suivez-nous!">
+					</a> <a class="mt-google mt-share-inline-bar-sm" href="https://plus.google.com/share?url="> <img
+						src="http://mojotech-static.s3.amazonaws.com/google@2x.png"
+						alt="Suivez-nous!">
+					</a>
+                </div>
+            </div>
+        </div>
 
-	<footer class="page-footer teal">
-	<div class="container">
-		<div class="row center">
-			<div class="col l4 s12">
-				<h5 class="white-text">Partenaires</h5>
-				<ul>
-					<li><a class="white-text" href="#!">Resto "A la gamelle"</a></li>
-					<li><a class="white-text" href="#!">Accro'banches</a></li>
-				</ul>
-			</div>
-			<div class="col l4 s12">
-				<h5 class="white-text">Contact</h5>
-				<ul>
-					<li><a class="white-text" href="#!">Chez R.</a></li>
-					<li><a class="white-text" href="#!">55, rue de Vincennes</a></li>
-					<li><a class="white-text" href="#!">33333
-							Thune-sur-Gironde</a></li>
-					<li><a class="white-text" href="#!">05 55 55 55 55</a></li>
-				</ul>
-			</div>
-			<div class="col l4 s12">
-				<h5 class="white-text">Suivez-nous</h5>
-			</div>
-			<div>
-				<a class="mt-facebook mt-share-inline-bar-sm"
-					href="https://www.facebook.com/sharer/sharer.php?u="> <img
-					src="http://mojotech-static.s3.amazonaws.com/facebook@2x.png"
-					alt="Suivez-nous!">
-				</a> <a class="mt-twitter mt-share-inline-bar-sm"
-					href="http://twitter.com/intent/tweet?text=&amp;url="> <img
-					src="http://mojotech-static.s3.amazonaws.com/twitter@2x.png"
-					alt="Suivez-nous!">
-				</a> <a class="mt-google mt-share-inline-bar-sm"
-					href="https://plus.google.com/share?url="> <img
-					src="http://mojotech-static.s3.amazonaws.com/google@2x.png"
-					alt="Suivez-nous!">
-				</a>
-			</div>
-		</div>
-	</div>
-	<!--  Copyright -->
-	<div class="footer-copyright">
-		<div class="container">
-			Copié-colled by <a class="brown-text text-lighten-3"
-				href="https://www.youtube.com/watch?v=BgoOihBb78w">Rudy</a>
-		</div>
-	</div>
-	</footer>
+        <!--  Copyright -->
+        <div class="footer-copyright">
+            <div class="container">
+                Copié-colled by <a class="brown-text text-lighten-3" href="https://www.youtube.com/watch?v=BgoOihBb78w">Rudy</a>
+            </div>
+        </div>
+    </footer>
 
-
-	<!-- bouton flottant remonter, merci Sylvain-->
-	<div class="fixed-action-btn">
-		<a class="waves-effect btn-floating btn-medium z-depth-4" href="#top"><i
+    <!-- bouton flottant remonter, merci Sylvain-->
+    <div class="fixed-action-btn">
+        <a class="waves-effect btn-floating btn-medium z-depth-4" href="#top"><i
 			class="medium material-icons">arrow_upward</i></a>
-	</div>
+    </div>
 
-
-	<!--  Scripts-->
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="js/materialize.js"></script>
-	<script src="js/init.js"></script>
-	<script src="js/select.js"></script>
-	<script src="js/pickdate.js"></script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/pickdate.js"></script>
 
 </body>
 
